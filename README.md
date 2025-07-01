@@ -17,6 +17,8 @@ https://github.com/user-attachments/assets/fd286071-7ad9-4931-a536-28d2a16dc3fd
 The sample video used in this project can be downloaded from:  
 👉 [Pexels Traffic Flow Video](https://www.pexels.com/video/traffic-flow-in-the-highway-2103099/)
 
+Rename the video file as "sample.mp4"
+
 ---
 
 ## 🧠 Models Used
