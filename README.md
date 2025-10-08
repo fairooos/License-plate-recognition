@@ -1,113 +1,59 @@
-# Automatic Number Plate Recognition with YOLOv8
-
-## 🔍 Overview
-This project performs automatic vehicle and number plate detection using YOLOv8, SORT for object tracking, and EasyOCR for text recognition. It processes video input, tracks vehicles, detects license plates, and overlays recognized plate numbers onto the output video.
+# Facebased-Attendence-Project
+A real-time attendance system using facial recognition to automate the process of marking attendance. This system captures faces, trains a model, and recognizes individuals to log their attendance in CSV files.
 
 ---
 
-## 🕸️ Web Interface
-Run the Streamlit app to upload and process videos directly in a web interface:
-```bash
-streamlit run app.py
-## 🎬 Demo
+## Features ✨
+- **Real-time Face Detection**: Uses Haar Cascade classifier for face detection via webcam.
+- **Attendance Automation**: Logs attendance with timestamps directly into CSV files.
+- **Simple CLI Menu**: Easy-to-use command-line interface with 5 options.
+- **Multi-User Support**: Capture and recognize multiple individuals.
+- **Confidence-Based Recognition**: Only marks attendance if recognition confidence > 67%.
+  
+---
 
-https://github.com/user-attachments/assets/fd286071-7ad9-4931-a536-28d2a16dc3fd
+## Technologies Used 🛠️
+- OpenCV (Face detection and LBPH recognition)
+- Pandas (CSV data handling)
+- Python Threading (For smoother training process)
 
 ---
 
-## 📹 Sample Video
+## Installation ⚙️
 
-The sample video used in this project can be downloaded from:  
-👉 [Pexels Traffic Flow Video](https://www.pexels.com/video/traffic-flow-in-the-highway-2103099/)
+### 1. Clone Repository
+```bash
+git clone [https://github.com/Faris-as/Facebased-Attendence-Project]
+cd face-recognition-attendance-system
+```
+### 2. Install Dependencies
+```bash
+pip install opencv-python pandas Pillow
+```
+### 3. Setup Directories
+Create these folders manually:
 
-Rename the video file as "sample.mp4"
+```bash
+mkdir TrainingImage StudentDetails TrainingImageLabel Attendance
+```
 
 ---
 
-## 🧠 Models Used
+## Usage 🚀
+Start the System
 
-- **Vehicle Detection**: YOLOv8n (pre-trained by Ultralytics)
-- **License Plate Detection**: A custom YOLOv8 model trained on [this Roboflow dataset](https://universe.roboflow.com/roboflow-universe-projects/license-plate-recognition-rxg4e/dataset/4)
-
-📥 [Download the trained license plate detector model](https://drive.google.com/file/d/1Zmf5ynaTFhmln2z7Qvv-tgjkWQYQ9Zdw/view?usp=sharing)
-
----
-
-## ⚠️ Important Note
-
-This project was tested with specific versions of `torch`, `torchvision`, `easyocr`, and `numpy`.  
-Some libraries (like `torch`, `numpy`, `Pillow`, etc.) may require specific versions to work correctly due to breaking changes in newer releases.
-
-🛠️ If you encounter issues like:
-- `ANTIALIAS` attribute error from `Pillow`
-- NumPy 2.x compatibility errors
-- Unpickling errors from PyTorch
-
-👉 You may need to **downgrade to:**
 ```bash
-pip install numpy<2.0 torch==2.1.0 torchvision==0.16.0 Pillow==9.5.0 easyocr==1.6.1
+python homge.py
 ```
 
-## 🔧 Dependencies
+## Notes 📝
+- 💡 ID Format: Must be numeric (e.g., 101, 202)
 
-Clone the SORT tracking module (required):
+- 💡 Name Format: Must be alphabetical (e.g., "John_Doe")
 
-```bash
+- 💻 Webcam required (tested with default laptop cameras)
 
-```
+- ⚠️ First-time users should run "Check Camera" (Option 1) before capture
 
-## ⚙️ Project Setup
-1️⃣ Create a virtual environment (Python 3.10)
-```bash
-conda create --prefix ./env python=3.10 -y
-conda activate ./env
-```
-2️⃣ Install dependencies
-```bash
-pip install -r requirements.txt
-```
-Or manually install with specific versions:
-
-```bash
-
-Number.plate.mp4
-pip install ultralytics==8.0.20
-pip install opencv-python
-pip install easyocr==1.6.1
-pip install scipy pandas matplotlib
-pip install torch==2.1.0 torchvision==0.16.0 numpy<2.0 Pillow==9.5.0
-```git clone https://github.com/abewley/sort
-## 🚀 Run the Pipeline
-➤ Step 1: Detect and track vehicles
-```bash
-python main.py
-```
-➤ Step 2: Interpolate missing frame data
-```bash
-python add_missing_data.py
-```
-➤ Step 3: Visualize the final result
-```bash
-python visualize.py
-```
-This will generate out.mp4 with bounding boxes and overlaid license plate numbers.
-## 📁 Project Structure
-```bash
-├── sample.mp4
-├── main.py
-├── add_missing_data.py
-├── visualize.py
-├── test.csv
-├── test_interpolated.csv
-├── license_plate_detector.pt
-├── sort/
-│   └── ...
-└── assets/
-    └── demo_preview.mp4
-```
-## 🙌 Acknowledgements
-
-- [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
-- [EasyOCR](https://github.com/JaidedAI/EasyOCR)
-- [SORT Object Tracker](https://github.com/abewley/sort)
-- [Roboflow License Plate Dataset](https://universe.roboflow.com/roboflow-universe-projects/license-plate-recognition-rxg4e)
+- 📊 Attendance files are saved in ``` Attendance/ ``` with format:
+   ```Attendance_YYYY-MM-DD_HH-MM-SS.csv```
