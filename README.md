@@ -53,7 +53,7 @@ pip install numpy<2.0 torch==2.1.0 torchvision==0.16.0 Pillow==9.5.0 easyocr==1.
 Clone the SORT tracking module (required):
 
 ```bash
-git clone https://github.com/abewley/sort
+
 ```
 
 ## ⚙️ Project Setup
@@ -69,7 +69,7 @@ pip install -r requirements.txt
 Or manually install with specific versions:
 
 ```bash
-out.mp4
+
 Number.plate.mp4
 pip install ultralytics==8.0.20
 pip install opencv-python
