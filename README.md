@@ -1,11 +1,14 @@
 # Automatic Number Plate Recognition with YOLOv8
 
 ## 🔍 Overview
-
 This project performs automatic vehicle and number plate detection using YOLOv8, SORT for object tracking, and EasyOCR for text recognition. It processes video input, tracks vehicles, detects license plates, and overlays recognized plate numbers onto the output video.
 
 ---
 
+## 🕸️ Web Interface
+Run the Streamlit app to upload and process videos directly in a web interface:
+```bash
+streamlit run app.py
 ## 🎬 Demo
 
 https://github.com/user-attachments/assets/fd286071-7ad9-4931-a536-28d2a16dc3fd
