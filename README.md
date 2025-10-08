@@ -69,12 +69,14 @@ pip install -r requirements.txt
 Or manually install with specific versions:
 
 ```bash
+out.mp4
+Number.plate.mp4
 pip install ultralytics==8.0.20
 pip install opencv-python
 pip install easyocr==1.6.1
 pip install scipy pandas matplotlib
 pip install torch==2.1.0 torchvision==0.16.0 numpy<2.0 Pillow==9.5.0
-```
+```git clone https://github.com/abewley/sort
 ## 🚀 Run the Pipeline
 ➤ Step 1: Detect and track vehicles
 ```bash
