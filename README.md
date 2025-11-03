@@ -10,7 +10,7 @@ This project performs automatic vehicle and number plate detection using YOLOv8,
 ![preview](https://github.com/Faris-as/licenseplate-ocr-detection/blob/main/demo/top.png)
 
 ## 🎬 Output
-[https://github.com/user-attachments/assets/fd286071-7ad9-4931-a536-28d2a16dc3fd](https://github.com/user-attachments/assets/a1f83d8a-0f8d-4c93-803a-0a4643ebab99)
+[https://github.com/user-attachments/assets/874be1f3-15eb-4d4e-8896-c5c22922a411](https://github.com/user-attachments/assets/874be1f3-15eb-4d4e-8896-c5c22922a411)
 
 ---
 
