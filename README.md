@@ -2,7 +2,7 @@
 
 ## 🔍 Overview
 
-This project performs automatic vehicle and number plate detection using YOLOv8, SORT for object tracking, and EasyOCR for text recognition. It processes video input, tracks vehicles, detects license plates, and overlays recognized plate numbers onto the output video.
+This project performs automatic vehicle and number plate detection using YOLOv8, SORT for object tracking, and EasyOCR for text recognition. It processes video input, tracks vehicles, detects license plates, and overlays recognized plate numbers onto the output video
 
 ---
 
